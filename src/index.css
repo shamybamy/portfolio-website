@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --colour-border: hsl(var(--border));
-  --colour-background: hsl(var(--background));
-  --colour-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
   
-  --colour-primary: hsl(var(--primary));
-  --colour-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
 
-  --colour-card: hsl(var(--card));
+  --color-card: hsl(var(--card));
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
@@ -90,7 +90,7 @@
   }
 
   body {
-    @apply bg-background text-foreground transition-colours duration-300;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: 'rLig' 1, 'calt' 1;
   }
 }
@@ -122,7 +122,7 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover-shadow-lg;
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
 }
 
@@ -141,12 +141,12 @@
 
 @utility star {
   @apply absolute rounded-full bg-white;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0,4);
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
 @utility meteor {
   @apply absolute rounded-full bg-linear-to-r from-white via-white to-transparent;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0,3);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 #root {
