@@ -6,7 +6,7 @@ const projects = [
     title: "Finance Website",
     description:
       "A websimulating a paper trading platform where users can register, log in, and manage a virtual stock portfolio.",
-    image: "/projects/Finance.png",
+    image: `${import.meta.env.BASE_URL}Projects/Finance.png`,
     tags: ["Python", "JavaScript", "HTML", "CSS", "Flask", "SQL"],
     githubURL: "https://github.com/shamybamy/Finance",
   },
@@ -17,7 +17,7 @@ const projects = [
       "A website serving as a personal portfolio to showcase my projects, skills, and background in software development.",
     // "This website was built using React, Tailwind CSS, and Vite. It serves as a personal portfolio to showcase my projects, skills, and background in software development. The site features responsive layouts, animated UI elements, and a dark mode toggle for improved user experience. Tailwind CSS was used extensively for styling, while React components were used to structure and manage different sections of the website.",
     // TODO image: "/projects/Portfolio.png",
-    image: "/projects/Portfolio.png",
+    image: `${import.meta.env.BASE_URL}Projects/Portfolio.png`,
     tags: ["JavaScript", "React", "TailwindCSS", "Vite", "Node.js"],
     githubURL: "https://github.com/shamybamy/portfolio-website",
   },
