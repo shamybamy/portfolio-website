@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Finance Website",
     description:
-      "A websimulating a paper trading platform where users can register, log in, and manage a virtual stock portfolio.",
+      "A website simulating a paper trading platform where users can register, log in, and manage a virtual stock portfolio.",
     image: `${import.meta.env.BASE_URL}Projects/Finance.png`,
     tags: ["Python", "JavaScript", "HTML", "CSS", "Flask", "SQL"],
     githubURL: "https://github.com/shamybamy/Finance",
