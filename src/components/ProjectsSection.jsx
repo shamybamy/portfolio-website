@@ -1,12 +1,32 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
+  {
+    id: "koto",
+    title: "Koto — Japanese Foundations",
+    description:
+      "A Japanese learning website where users can study pronunciation, prosody and pitch accent, as well as practise hiragana and katakana with FSRS spaced repetition.",
+    image: `${import.meta.env.BASE_URL}projects/Koto.png`,
+    imageAlt: "Koto artwork featuring a hiragana flashcard and pitch-accent curve",
+    tags: ["Next.js", "TypeScript", "React", "AWS", "DynamoDB"],
+    githubURL: "https://github.com/shamybamy/koto-japanese-foundations",
+  },
+  {
+    id: "techjam",
+    title: "TikTok TechJam — Agent Run Supervisor",
+    description:
+      "An agent monitoring platform built using Kafka architecture for TikTok TechJam 2026 where users can track AI agent activity, review alerts, and recover stalled runs.",
+    image: `${import.meta.env.BASE_URL}projects/TechJam.png`,
+    imageAlt: "Agent Run Supervisor dashboard with run health, event history and suspicious-activity alerts",
+    tags: ["TypeScript", "Fastify", "Kafka", "SQLite", "React"],
+    githubURL: "https://github.com/shamybamy/CodeJam",
+  },
   {
     id: 1,
     title: "Finance Website",
     description:
-      "A website simulating a paper trading platform where users can register, log in, and manage a virtual stock portfolio.",
-    image: `${import.meta.env.BASE_URL}Projects/Finance.png`,
+      "A paper trading website where users can look up stock prices, trade virtual shares, and track their portfolio and transaction history.",
+    image: `${import.meta.env.BASE_URL}projects/Finance.png`,
     tags: ["Python", "JavaScript", "HTML", "CSS", "Flask", "SQL"],
     githubURL: "https://github.com/shamybamy/Finance",
   },
@@ -14,10 +34,8 @@ const projects = [
     id: 2,
     title: "Portfolio Website",
     description:
-      "A website serving as a personal portfolio to showcase my projects, skills, and background in software development.",
-    // "This website was built using React, Tailwind CSS, and Vite. It serves as a personal portfolio to showcase my projects, skills, and background in software development. The site features responsive layouts, animated UI elements, and a dark mode toggle for improved user experience. Tailwind CSS was used extensively for styling, while React components were used to structure and manage different sections of the website.",
-    // TODO image: "/projects/Portfolio.png",
-    image: `${import.meta.env.BASE_URL}Projects/Portfolio.png`,
+      "A personal portfolio website where visitors can explore my projects, browse my skills, and learn about my background in software development.",
+    image: `${import.meta.env.BASE_URL}projects/Portfolio.png`,
     tags: ["JavaScript", "React", "TailwindCSS", "Vite", "Node.js"],
     githubURL: "https://github.com/shamybamy/portfolio-website",
   },
@@ -32,23 +50,24 @@ export const ProjectsSection = () => {
           <span className="text-primary">Projects</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance and user experience
+          A selection of my work, from learning tools and web applications to
+          backend systems built for a hackathon.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
           {projects.map((project) => (
-            <div
+            <article
               key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group flex flex-col bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="aspect-[2/1] overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.imageAlt ?? project.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
@@ -66,19 +85,19 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.githubURL}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
+                <div className="mt-auto pt-2 flex flex-wrap items-center gap-4">
+                  <a
+                    href={project.githubURL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${project.title} on GitHub`}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary rounded-sm"
+                  >
+                    <Github size={18} aria-hidden="true" /> View code
+                  </a>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -86,9 +105,10 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/shamybamy"
           >
-            Check My Github <ArrowRight size={16} />
+            Check My GitHub <ArrowRight size={16} />
           </a>
         </div>
       </div>
