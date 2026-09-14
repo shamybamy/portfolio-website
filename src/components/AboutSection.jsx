@@ -38,7 +38,7 @@ export const AboutSection = () => {
           {/* resume buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
             <a
-              href="https://drive.google.com/file/d/1aVPhOIVxj8mS1Do4Xs9ay4LfO99k5Vh7/view?usp=sharing"
+              href="https://drive.google.com/file/d/1YmUvc_cW40_HoAiRLAglomcD30IbW85h/view?usp=sharing"
               className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
             >
               Resume
