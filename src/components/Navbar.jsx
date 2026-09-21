@@ -8,7 +8,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Resume", href: "https://drive.google.com/file/d/1YmUvc_cW40_HoAiRLAglomcD30IbW85h/view?usp=sharing" },
+  { name: "Resume", href: "https://drive.google.com/file/d/1YPQ_Snb76IQiLF_xON9obLDviq8os26O/view?usp=sharing" },
 ];
 
 export const Navbar = () => {
